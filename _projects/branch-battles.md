@@ -1,11 +1,11 @@
 ---
-name: The Movies Project
-tools: [C#, XML, WPF]
-image: https://www.sketchappsources.com/resources/source-image/movie-badges-jurajjurik.png
-description: This project has an individual showcase page, not just a direct link to the project site or repo. Now you have more space to describe your awesome project!
+name: Branch Battles
+tools: [Unity]
+image: https://img.itch.zone/aW1nLzEzMzczMjg5LmpwZw==/original/DHFSIH.jpg
+description: Welcome to Branch Battles, a very cool game I promise
 ---
 
-# The Movies Project
+# Branch Battles
 
 Branch Battles is a Real Time Strategy game created entirely by me in Unity.
 

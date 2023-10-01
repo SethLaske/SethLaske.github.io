@@ -24,7 +24,7 @@ nav_exclude:                                            # The following paths ar
 ### Author Info ###
 author:
   name              : Seth Laske
-#  image             : https://i.imgur.com/uyDNQnn.jpg
+  image             : https://www.cpp.edu/siil/img/events/harvest-seth.webp
 #  behance           : your_username
 # dribbble          : your_username
   email             : sethlaske@gmail.com
@@ -33,7 +33,7 @@ author:
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
-  linkedin          : Seth_Laske
+  linkedin          : seth-laske/
 #  medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
