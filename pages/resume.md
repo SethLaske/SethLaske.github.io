@@ -7,12 +7,8 @@ weight: 3
 
 # **Resume**
 
-Hi I am really hoping my resume is available , but for this one it might be
+Check out my very good resume, sponsored by GPT
 
 <p class="text-center">
-  <a href="resume.pdf" target="_blank">
-             View My Resume (PDF)
-
-  </a>
-  <embed src="resume.pdf" width="100%" height="600px" type="application/pdf" class="embedded-pdf">
+<iframe src="resume.pdf" width="100%" height="600px"></iframe>
 </p>
