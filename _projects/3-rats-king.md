@@ -1,6 +1,6 @@
 ---
 name: Rat's King
-tools: [Unity]
+tools: [C#, Unity]
 image: https://img.itch.zone/aW1nLzEyMDgwNTgzLnBuZw==/original/wCDSPE.png
 description: I am the Rat King, King of the Rats
 ---

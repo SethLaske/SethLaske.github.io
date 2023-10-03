@@ -1,13 +1,13 @@
 ---
-name: Knight's Nemesis
+name: NavMesh Pathfinder
 tools: [Java, Processing]
 image: /assets/Pathfinder.png
-description: The weakest of my projects
+description: Implementing AI agent movementing and pathfind behaviors through randomly generated mazes
 ---
 
 # Navmesh Pathfinder
 
-Developing this AI agent capable of pathfinding through mazes was a semester long project for my Game AI course
+Developing this AI agent capable of pathfinding through a variety of maze styles was a semester long project for my Game AI course
 
 ## Functionality
 
@@ -24,6 +24,8 @@ Developing this AI agent capable of pathfinding through mazes was a semester lon
 
 Over the course of the projects implementation I learned how and why maps are designed in certain ways, and tricks to take advantage of that
 
-How to create organic behaviors, and balance them to make them both believable and effective at traversing complicated maps
+A*, a pathfinding formula I have since used for multiple projects, implemented in a variety of ways. An incredibly useful algorithm
+
+How to create organic movement behaviors, and balance them to make them both believable and effective at traversing complicated maps
 
 Procedurally generated levels, in this case implemented through randomized mazes

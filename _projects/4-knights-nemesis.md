@@ -1,8 +1,8 @@
 ---
 name: Knight's Nemesis
-tools: [Unity]
+tools: [C#, Unity]
 image: 
-description: The weakest of my projects
+description: My first game project
 ---
 
 # Knight's Nemesis

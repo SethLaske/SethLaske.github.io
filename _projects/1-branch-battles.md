@@ -1,6 +1,6 @@
 ---
 name: Branch Battles
-tools: [Unity]
+tools: [C#, Unity]
 image: https://img.itch.zone/aW1nLzEzMzczMjg5LmpwZw==/original/DHFSIH.jpg
 description: 2D RTS Game inspired by Stick War. Train, Battle, Conquer.
 ---
@@ -42,6 +42,7 @@ Some specific elements that I am really happy about:
 * Save System- Although not a specifically challenging feature to implement, there were nuances to it that I couldn't have appreciated without working on myself and it is key to making this feel like a more professional game
 * Player Engagement- Not everyone I've sent the game out to has been really impressed with the copy and geniunely seem to enjoy playing the game
 * Artwork- I'm not artist by any means, but compared to the art I produced at the beginning, the released game has its own style and the animations flow
+* Shaders- An incredibly small part of the game and development time, but learning the basics of a shader graph for changing units coloring automatically adds a lot to clarifying gameplay and adding subtle details
 * Depth of gameplay- Perhaps a con to some people, but the levels are challenging enough and the player is given enough different options that it truely is a strategy game that forces players to adapt 
 
 ## The Bad

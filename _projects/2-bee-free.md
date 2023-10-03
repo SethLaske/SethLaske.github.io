@@ -1,6 +1,6 @@
 ---
 name: Bee Free
-tools: [Unity]
+tools: [C#, Unity]
 image: https://img.itch.zone/aW1hZ2UvMjAzMjY5Ni8xMTk1NjgzNC5wbmc=/347x500/kmjMWP.png
 description: Play as a Queen Bee saving her hive from the evil bears.
 ---
