@@ -1,10 +1,10 @@
 - title: Student, CPP CS
   from: 2020
   to: 2023
-  description: Didn't learn shit. Lot of screwing around. Kinda productive occasionally.
+  description: Joined Game Development Club, as both a team member and team lead. Working on physics simulations in Unity for Aerospace Engineering students. Grader for Game Development class.
 
 - title: Digital Product Developer Intern
   from: May 2023
   to: August 2023
-  description: Made a cool tile slider game for an advent calendar
+  description: Worked on the Unity team to create the Jacquie Lawson 2023 Advent Calendar. Added multiple minigames for users to play and decorate their homebase. Created levels for the match 3 minigames. Designed an ingame level editor to quick prototype and iterate sections on an infinite runner style ski game. For a personal project I created an *n*x*n* tile slider puzzle game, complete with two variations of auto solvers, animation and A*, a tutorial and various accessibility options.
 

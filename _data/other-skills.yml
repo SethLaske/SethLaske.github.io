@@ -1,11 +1,7 @@
 - name: Unity
-  percentage: 69
+  percentage: 90
   color: info
 
-- name: Unity
-  percentage: 31
-  color: success
-
 - name: Math
-  percentage: 100
+  percentage: 90
   color:

@@ -23,6 +23,7 @@ Unlock 8 different units
 Battle in 4 different combat styles
 Only 1 chance for glory
 
+![Mining GIF](/assets/mining.gif)
 
 ## Why
 
