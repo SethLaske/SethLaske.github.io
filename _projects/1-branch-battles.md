@@ -2,12 +2,12 @@
 name: Branch Battles
 tools: [Unity]
 image: https://img.itch.zone/aW1nLzEzMzczMjg5LmpwZw==/original/DHFSIH.jpg
-description: Welcome to Branch Battles, a very cool game I promise
+description: 2D RTS Game inspired by Stick War. Train, Battle, Conquer.
 ---
 
 # Branch Battles
 
-Branch Battles is a Real Time Strategy game created entirely by me in Unity.
+Branch Battles is a Real Time Strategy game created entirely by me in Unity. 
 
 <p class="text-center">
 {% include elements/button.html link="https://ratske.itch.io/branch-battles" text="Play Now" %}
@@ -18,10 +18,10 @@ Branch Battles is a Real Time Strategy game created entirely by me in Unity.
 ## Gameplay
 
 Train miners to get gold, use gold to get soldiers, use soldiers to get victory.
-Play 15 unique levels
-Unlock 8 different units
-Battle in 4 different combat styles
-Only 1 chance for glory
+* Play 15 unique levels
+* Unlock 8 different units
+* Battle in 4 different combat styles
+* Only 1 chance for glory
 
 ![Mining GIF](/assets/mining.gif)
 
@@ -47,7 +47,7 @@ Some specific elements that I am really happy about:
 ## The Bad
 
 Even though Branch Battles is released, there are still plenty of issues to address, and some weaknesses in the foundations of the game that I should address
-* Dirty Code- My coding ability throughout has been improving, which revealed a lot of inconsistencies and inefficiencies in my early code that is painful to look back on
+* Weak Start- My coding ability throughout has been improving, which revealed a lot of inconsistencies and inefficiencies in my early code that is painful to look back on
 * Artwork- Due to it not being my focus for the game, and not an aspect I enjoy working on, there are a lot of animations I never added, and the menus look dreadful compared to the art in each level
 * Level Balancing- Lack of indepth outside playtesters allowed me to make certain levels very challenging for myself... and downright unfair for other players
 

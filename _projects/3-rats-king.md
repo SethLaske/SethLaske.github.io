@@ -29,4 +29,6 @@ A ranged enemy that keeps it's distance, a tank enemy with powerful attacks, and
 
 ## What did I learn
 
-I really enjoyed this project, as I could be given tasks, and just finish them. I enjoy designing games, but working on this project showed me that I can appreciate stepping back and just finishing all of my assigned tasks for a game
+I really enjoyed working on this project as a secondary game to work on at the time. I had no part in the leadership, and was given freedom to grab tasks for myself each week, and implement them to the best of my ability. It was a very relaxing project to be able to let go of game design, and taught me that I can be happy in a project without having a high degree of control over other members and the final outcome.
+
+It also taught me how to work within the scope of other people's work a lot more than other projects. I learned to be a lot more careful in Git, especially within the context of Unity. Also implementing clean code principles and being very intentional with all of my work, and making it as easy to modify in Unity's inspector as possible. 
