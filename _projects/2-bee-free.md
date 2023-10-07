@@ -7,22 +7,31 @@ description: Play as a Queen Bee saving her hive from the evil bears.
 
 # Bee Free
 
-Bee Free is a Stealth game created entirely for the EGD x SGDA Spring Game Jam 2023 by a 9 person team. I primarily worked on the guards that patrol the levels, as well as designing the levels themselves
+Bee Free is a Stealth game created entirely for the EGD x SGDA Spring Game Jam 2023 by a 9 person team in 48 hours. I worked on the enemy bears AI, and designing levels.
+
+![preview](https://img.itch.zone/aW1hZ2UvMjAzMjY5Ni8xMTk1NjgzNC5wbmc=/347x500/kmjMWP.png)
 
 <p class="text-center">
 {% include elements/button.html link="https://notalobster.itch.io/bee-free" text="Play Now" %}
 </p>
 
-![preview](https://img.itch.zone/aW1hZ2UvMjAzMjY5Ni8xMTk1NjgzNC5wbmc=/347x500/kmjMWP.png)
-
+![Movement GIF](/assets/BeeFree/Basic.gif)
 ## Overview
 
-Fly through each level as a queen bee, reclaiming honey and freeing your colony from mechanized bears
+Fly through each level as the Queen Bee, reclaiming honey and freeing your colony from mechanized bears
+
 Be careful though, the bears have uncanny sight and hearing so make sure you bee careful while navigating the mazes
+
 Shoot honey to temporarily distract the bears
+
 Hide in various positions to avoid their detection
+
 If a bear does get you, any saved bees will return the favor for you
 
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/BeeFree/Hiding.gif" alt="Hiding GIF" width="45%">
+    <img src="/assets/BeeFree/Honey.gif" alt="Honey GIF" width="45%">
+</div>
 
 ## Contributions
 
@@ -34,11 +43,9 @@ I worked on the bear's entire controllers. A bear needed to be able to pathfind 
 * Patrol - A series of guard points could be added throughout the level to create small circuits of bears, or placed across the map for a more dynamic game. Each post tracked the next post in the cycle, making it easy to design levels in the inspector. Each bear was also keyed into its path, ensuring that even if the bear tracks the player well off course, it will still return to its original post.
 * Chase - Once a player is located, the bear will immediately move towards the player. To ensure the player has a chance of escaping the bears, I forced the bears to maintain a line of sight to the player. If a player manages to break that line of sight, the bear will still go to the last point the bear had line of sight, do a full 360 to try and find the player again, and then return back to its post.
 * Sight - The sight mechanic is very simple, a bear has a cone shaped collider in front of them, and if the player enters that and the bear has clear line of sight, then the bear will detect the player and start chasing.
-* Hearing - The bear can hear the player when the player is close enough to the bear in any direction then the bear has a chance to hear the player. This chance is increased the closer the player is to the bear. If a player is heard, then the bear will leave its current patrol path to go to the position where the player was heard, and look around that area. This feature was admitedly a bit unfair as the bear will seemingly randomly walk towards you, and poorly explained in game. In hindsight it might have been better to scrap the feature and make the challenging game a bit easier. If I was to fix the mechanic I would add a visual indication of where the hearing is, make the chance increase cubically, and add a "sound" to the player so if they are moving they make more noise than when they are standing still.
+* Hearing - The bear has a chance to hear the player whenever the player is close enough to the bear in any direction. This chance is increased the closer the player is to the bear. If a player is heard, then the bear will leave its current patrol path to go to the position where the player was heard, and look around that area. This feature was admitedly a bit unfair as the bear will seemingly randomly walk towards you, and poorly explained in game. In hindsight it might have been better to scrap the feature and make the challenging game a bit easier. If I was to fix the mechanic I would add a visual indication of where the hearing is, make the chance increase cubically, and add a "sound" to the player so if they are moving they make more noise than when they are standing still.
 
-![Movement GIF](/assets/BeeFree/Basic.gif)
-![Hiding GIF](/assets/BeeFree/Hiding.gif)
-![Honey GIF](/assets/BeeFree/Honey.gif)
+![Movement GIF](/assets/BeeFree/TopView.gif)
 
 #### Level Designer
 Naturally to finish the game we actually needed to have playable levels, and since I created the navigation system I also took on the responsibility of making two of the levels. In order to make the game longer I designed the levels to be large and challenging so that players would have to learn each mechanic in order to beat our game.
