@@ -13,10 +13,12 @@ I have been working on a variety of smaller projects during my education, take a
 
 When I'm not working on schoolwork or making video games I spend my time playing games, running, rock climbing, reading, and hanging out with friends
 
+<!--
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
 {% include about/skills.html title="Other Skills" source=site.data.other-skills %}
 </div>
+-->
 
 <div class="row">
 {% include about/timeline.html %}
