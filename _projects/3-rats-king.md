@@ -7,28 +7,46 @@ description: I am the Rat King, King of the Rats
 
 # Rat's King
 
-Rat's King is a hack and slash game created for the CPP Game Development Club
+Rat's King is a hack and slash game created for the CPP Game Development Club in the spring semester of 2023 by a team of 20 members. I focused on developing enemies, as well as a variety of other mechanics.
+
+![Gameplay](/assets/RatsKing/Gameplay.gif)
 
 <p class="text-center">
 {% include elements/button.html link="https://firstcrow.itch.io/rats-king" text="Play Now" %}
 </p>
 
-![preview](https://img.itch.zone/aW1nLzEyMDgwNTgzLnBuZw==/original/wCDSPE.png)
-
-## Gameplay
+## Overview
 
 Play as a rat in the sewers of Victorian London to become an honorable rat
-Attack with your pen as a melee weapon
-Once you have slain enough enemies use their blood to fuel your ranged attack
 
+Attack with your pen as a melee weapon
+
+Once you have slain enough enemies use their blood to fuel your ranged attack or healing powers
+
+![preview](https://img.itch.zone/aW1nLzEyMDgwNTgzLnBuZw==/original/wCDSPE.png)
 
 ## Contributions
+#### Enemy Developer
+The main portion of my time on this project was developing enemies that the player can encounter and fight:
+* Hedgehog - A typical large enemy with slow move and attack speeds, but a high damage that the player will need to avoid. The hedgehog also will wander through the level when the player is not nearby.
+* Shrew - A long ranged sniper that will retreat from any player that gets too close. Although the shrews throw a lot of daggers, they move slowly and can be deflected with the players own melee slash.
+* Mouse - A two phased enemy. While in the first phase the mouse will hide under a newspaper and blend into the surroundings. Once a player approaches the mouse jumps out with a  high movement speed and quick attacks. Although easily avoidable the mouse becomes an immediate threat to the player that needs to be dealt with quickly.
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/RatsKing/Hedgehog.gif" alt="Hedgehog GIF" width="30%">
+    <img src="/assets/RatsKing/Shrew.gif" alt="Shrew GIF" width="30%">
+    <img src="/assets/RatsKing/Mouse.gif" alt="Mouse GIF" width="30%">
+</div>
 
-I took a small part on a large team, so I just created a few enemies to fulfill the generic enemy types
-A ranged enemy that keeps it's distance, a tank enemy with powerful attacks, and a fast stealth enemy that chases you anywhere
+#### Misc Additions
+In addition to the enemies I also added a handful of simpler mechanics throughout the game. The player has a dashing mechanic and the gold that gets attracted to the player.
 
-## What did I learn
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/RatsKing/Dash.gif" alt="Dash GIF" width="40%">
+    <img src="/assets/RatsKing/Gold.gif" alt="Gold GIF" width="40%">
+</div>
 
-I really enjoyed working on this project as a secondary game to work on at the time. I had no part in the leadership, and was given freedom to grab tasks for myself each week, and implement them to the best of my ability. It was a very relaxing project to be able to let go of game design, and taught me that I can be happy in a project without having a high degree of control over other members and the final outcome.
+## What I learned
+
+I learned how to be a lot more hands off with a project as a whole. I was able to work in a small section of the game, without needing to be constantly aware of all the other parts of the project. This was also very relaxing in comparison to Branch Battles, as I worked on both at the same time, I had specific tasks to work on, and once I finished those tasks I was done for the week.
 
 It also taught me how to work within the scope of other people's work a lot more than other projects. I learned to be a lot more careful in Git, especially within the context of Unity. Also implementing clean code principles and being very intentional with all of my work, and making it as easy to modify in Unity's inspector as possible. 

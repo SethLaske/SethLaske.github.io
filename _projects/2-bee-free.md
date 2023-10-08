@@ -52,11 +52,15 @@ Naturally to finish the game we actually needed to have playable levels, and sin
 * Level 2 - A very linear map with several sections, each having multiple viable pathways through. Frequent hiding spots to take a rest, as well as a large number of collectable bees to survive the many bear attacks.
 * Level 3 - A much larger map, with different pathways, but only one path to the finish. Items were spread throughout the map, in smaller quantities as the bears were more spread out as well. Despite many of the patrol paths being relatively small, one group of bears have a path that traverse the entire level, encouraging the player to keep moving in case of an unexpected bear walking through.
 
-![Level2](/assets/BeeFree/Level2.png)
-![Level3](/assets/BeeFree/Level3.png)
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/BeeFree/Level2.png" alt="Level 2" width="45%">
+    <img src="/assets/BeeFree/Level3.png" alt="Level 3" width="45%">
+</div>
 
-## What did I learn
+## What I Learned
 
 A common theme I have learned from games is the importance of playtesting early and frequent, even in a project as short as this one. Some of the bugs would have been caught earlier had more members on the team playtested earlier on, and my levels could have been improved on.
+
 Also the importance of having a variety of projects and a personal codebase to work from. The other main programmer on the team was able to work a lot faster because he had more previous game jam experience and was able to pull a lot of his code from previous works, which really helped us out.
+
 The communication on this team was very good, partially due to everyone being constantly active during the short time span. This really helped us coordinate git effectively and avoid any merge issues, which can be a huge flow and time killer during a jam.
