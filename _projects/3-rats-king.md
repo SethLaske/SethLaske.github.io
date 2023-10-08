@@ -47,7 +47,7 @@ In addition to the enemies I also added a handful of simpler mechanics throughou
     <img src="/assets/RatsKing/Gold.gif" alt="Gold GIF" width="40%">
 </div>
 
-## What I learned
+## What I Learned
 
 I learned how to be a lot more hands off with a project as a whole. I was able to work in a small section of the game, without needing to be constantly aware of all the other parts of the project. This was also very relaxing in comparison to Branch Battles, as I worked on both at the same time, I had specific tasks to work on, and once I finished those tasks I was done for the week.
 

@@ -7,7 +7,7 @@ description: Implementing AI agent movementing and pathfind behaviors through ra
 
 # Navmesh Pathfinder
 
-Creating the boid movement, navmesh generator, and random maze generator was a semester long project for my Game AI class in 2022.
+Creating the boid movement, navmesh generator, and random maze generator was a semester long project for my Game AI class in 2022. This was created inside of the Processing framework, programmed in Java.
 
 ## Overview
 This project was designed to give us an indepth view of how NPCs can move through both preset and randomly generated levels.
@@ -77,14 +77,14 @@ This algorithm results in a cycleless maze.
     <img src="/assets/Navmesh/RandomMazes.gif" alt="Random Mazes GIF" width="40%">
 </div>
 
-![Mining GIF](/assets/Navigation.png)
+## What I Learned
 
-## What did I learn
+Over the course of this project (and class) I learned a lot about how to design extremely intentional and believable NPC movements and behaviors.
 
-Over the course of the projects implementation I learned how and why maps are designed in certain ways, and tricks to take advantage of that
+Learning A* was also incredibly important, as I have used the algorithm in multiple projects and work since then. Learning the fundamentals and implementation here gave me enough understanding to be able to modify the implementation to prioritize different aspects as well, such as computing time or minimizing cycles based on the situation.
 
-A*, a pathfinding formula I have since used for multiple projects, implemented in a variety of ways. An incredibly useful algorithm
+By implementing the maps, I also learned why game developers create maps in certain ways, as well as how the different implementations can affect behaviors. Designing these levels with the behavior in mind is crucial when comparing how the same boid can behave differently in the preset levels and the maze. 
 
-How to create organic movement behaviors, and balance them to make them both believable and effective at traversing complicated maps
+The process of dividing a level into polygons was also very important. The process of splitting up these polygons was a challenge to understand, but once implemented allowed for clean pathfinding and movement mechanics. As well as improving my understanding of vector math, especially within a program.
 
-Procedurally generated levels, in this case implemented through randomized mazes
+And finally implementing a style of procedurally generated level design was an important experience. Prim's algorithm is very straight forward, and useful at generating a cycleless maze, but nodes closer to the center will typically connect to more neighbors on account of being in the frontier longer. 
