@@ -9,7 +9,7 @@ description: I am the Rat King, King of the Rats
 
 Rat's King is a hack and slash game created for the CPP Game Development Club in the spring semester of 2023 by a team of 20 members. I focused on developing enemies, as well as a variety of other mechanics.
 
-![Gameplay](/assets/RatsKing/Gameplay.gif)
+![preview](https://img.itch.zone/aW1nLzEyMDgwNTgzLnBuZw==/original/wCDSPE.png)
 
 <p class="text-center">
 {% include elements/button.html link="https://firstcrow.itch.io/rats-king" text="Play Now" %}
@@ -19,18 +19,20 @@ Rat's King is a hack and slash game created for the CPP Game Development Club in
 
 Play as a rat in the sewers of Victorian London to become an honorable rat
 
-Attack with your pen as a melee weapon
+Attack your rival animals with your pen as a melee weapon
 
 Once you have slain enough enemies use their blood to fuel your ranged attack or healing powers
 
-![preview](https://img.itch.zone/aW1nLzEyMDgwNTgzLnBuZw==/original/wCDSPE.png)
+![Gameplay](/assets/RatsKing/Gameplay.gif)
 
 ## Contributions
+
 #### Enemy Developer
 The main portion of my time on this project was developing enemies that the player can encounter and fight:
 * Hedgehog - A typical large enemy with slow move and attack speeds, but a high damage that the player will need to avoid. The hedgehog also will wander through the level when the player is not nearby.
 * Shrew - A long ranged sniper that will retreat from any player that gets too close. Although the shrews throw a lot of daggers, they move slowly and can be deflected with the players own melee slash.
 * Mouse - A two phased enemy. While in the first phase the mouse will hide under a newspaper and blend into the surroundings. Once a player approaches the mouse jumps out with a  high movement speed and quick attacks. Although easily avoidable the mouse becomes an immediate threat to the player that needs to be dealt with quickly.
+
 <div style="display: flex; justify-content: space-between;">
     <img src="/assets/RatsKing/Hedgehog.gif" alt="Hedgehog GIF" width="30%">
     <img src="/assets/RatsKing/Shrew.gif" alt="Shrew GIF" width="30%">
