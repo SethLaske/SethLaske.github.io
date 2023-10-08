@@ -7,16 +7,75 @@ description: Implementing AI agent movementing and pathfind behaviors through ra
 
 # Navmesh Pathfinder
 
-Developing this AI agent capable of pathfinding through a variety of maze styles was a semester long project for my Game AI course
+Creating the boid movement, navmesh generator, and random maze generator was a semester long project for my Game AI class in 2022.
 
-## Functionality
-
+## Overview
+This project was designed to give us an indepth view of how NPCs can move through both preset and randomly generated levels.
 * Organic steering behaviors to control velocity and acceleration
+* Movement through a series of waypoints, slowing down to handle tight corners and moving quickly through straighter paths
 * Converting a level into a graph of connected polygons
 * Using A* to calculate an optimal route through any maze 
 * Interpret that series of nodes to traverse into the path for the boid to travel
 * Use predictive behaviors to handle intentionally complicated routes without collisions
 * Generate grid based mazes of any size using Prims Algorithm
+
+![Functionality](/assets/Navmesh/MazeNoExtra.gif)
+
+## Contributions
+
+#### Navmesh Generation
+
+In order to create a NavMesh on a predetermined level the walls are first ordered, and connected in series.
+
+With all of the walls drawn, any concave angles are found in the original level shape. For each obtuse angle, an additional line is drawn to a different useable vertex, splitting the original polygon into two.
+
+This recurses into the two created polygons until all polygons are convex. Each polygon also remembers what wall it was split from, to be used to create a graph later.
+
+Each polygon then is reattached to the polygon it was split from, creating a graph that traverses the entire level.
+
+![Creating Navmesh](/assets/Navmesh/CreatingNavmesh.gif)
+
+#### A* Pathfinding
+
+In order to take advantage of the NavMesh, A* is implemented to find an optimal route through each polygon.
+
+When a waypoint is selected the boid first finds the polygon it is currently in, and the polygon the target is in.
+
+The boid then uses A* to find an optimal path, using the distance between the centers of each polygon as the heuristic values.
+
+Once a series of polygons is found, the boid will then go through the edge that connects each polygon, and set waypoints on the midpoint of these connecting edges.
+
+Although this can result in the boid occasionally moving off target, it guarantees that the boid will not crash into walls that could be intersecting the direct line between polygon centers.
+
+The boid will then pathfind from its starting point, through each midpoint, and finally to its final target.
+
+Multiple waypoints can be added in simultaneously by pathfinding between each waypoint into a single movement path.
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/Navmesh/MazeAllExtra.gif" alt="Creating Maze GIF" width="40%">
+</div>
+
+#### Random Maze Generation
+Mazes are created randomly using Prim's algorithm.
+
+First the available space is split into a grid of centerpoints.
+
+A random point is selected for the maze to be generated from, and adds all of the adjacent nodes to a frontier of potential nodes.
+
+A node is selected from that frontier randomly, and connected to the node that added it to the frontier.
+
+The node that was just added will then add all of the adjacent nodes that have not already been added to the maze.
+
+This cycles through until every node has been added to the maze.
+
+The walkable path is determined by which nodes added their "children" to the maze, and walls are drawn between the rest of the adjacent nodes.
+
+This algorithm results in a cycleless maze.
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/Navmesh/CreatingMaze.gif" alt="Creating Maze GIF" width="40%">
+    <img src="/assets/Navmesh/RandomMazes.gif" alt="Random Mazes GIF" width="40%">
+</div>
 
 ![Mining GIF](/assets/Navigation.png)
 
