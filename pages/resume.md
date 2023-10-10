@@ -10,5 +10,5 @@ weight: 3
 Check out my free to download resume!
 
 <p class="text-center">
-<iframe src="/resume.pdf" width="100%" height="600px"></iframe>
+<iframe src="/assets/resume.pdf" width="100%" height="600px"></iframe>
 </p>

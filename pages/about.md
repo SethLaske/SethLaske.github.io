@@ -9,9 +9,9 @@ weight: 3
 
 Hi I am **{{ site.author.name }}** ,<br>
 I'm a graduating CS major from Cal Poly Pomona, looking to get into the video game industry when I graduate as a **Gameplay/AI Programmer**
-I have been working on a variety of smaller projects during my education, take a look at my projects to see more details
+I have been working on a variety of smaller projects outside of my course work as well, including games in a variety of situations, check out my projects for more details.
 
-When I'm not working on schoolwork or making video games I spend my time playing games, running, rock climbing, reading, and hanging out with friends
+When I'm not working on schoolwork or making video games I spend my time playing games (favorites include JRPGs and Strategy games), running (still training for the sub 15 minute 3 mile), rock climbing (A very impressive V4 max), reading (Typically fantasy, but I need to finish my Corvette book), and hanging out with friends (Spikeball, Blackjack, Swimming, etc)
 
 <!--
 <div class="row">
