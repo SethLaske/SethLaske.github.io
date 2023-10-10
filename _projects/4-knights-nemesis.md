@@ -7,7 +7,7 @@ description: My first game project
 
 # Knight's Nemesis
 
-Knight's Nemesis is my semester project from the game development class
+Knight's Nemesis is my semester project from the game development class, created by a 4 person team.
 
 <p class="text-center">
 {% include elements/button.html link="https://yawgmoth.github.io/CS4700/assets/games/KnightsNemesis/index.html" text="Play Now" %}
@@ -21,6 +21,7 @@ Time your attacks carefully in this turnbased game>
 
 ***
 > Page not finished. Plenty more for me to add, but not quite as much as Branch Battles
+
 ***
 
 ## Contributions
