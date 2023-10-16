@@ -7,7 +7,7 @@ description: Play as a Queen Bee saving her hive from the evil bears.
 
 # Bee Free
 
-Bee Free is a Stealth game created entirely for the EGD x SGDA Spring Game Jam 2023 by a 9 person team in 48 hours. I worked on the enemy bears AI, and designing levels.
+Bee Free is a Stealth game created for the EGD x SGDA Spring Game Jam 2023 by a 9 person team in 48 hours. I worked on the enemy bears AI, and designing levels.
 
 ![preview](https://img.itch.zone/aW1hZ2UvMjAzMjY5Ni8xMTk1NjgzNC5wbmc=/347x500/kmjMWP.png)
 
