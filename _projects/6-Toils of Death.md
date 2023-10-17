@@ -1,5 +1,5 @@
 ---
-name: Toils of Death: A Toad's Journey
+name: Toils of Death - A Toad's Journey
 tools: [C#, Unity]
 image: /assets/ToilsOfDeath/Cover.png
 description: Play as an amateur Reaper, escorting a cowardly Toad through the spooky wild.
@@ -37,7 +37,7 @@ Conquer your fear of the dark as this dark story unfolds
 The available themes for this jam were toil and toad, and also needed to have elements of Halloween and/or Horror. So in my brainstorming I tried to think of a game mechanic that fit the theme of toil, when I remembered a classic meme:
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="https://img.ifunny.co/images/4a74a1961f40fdf363b29e9fa12840a73579372755ad3e9b61d495f1fec9e15c_1.jpg" alt="Honey GIF" width="35%">
+    <img src="/assets/ToilsOfDeath/Meme.png" alt="Meme PNG" width="35%">
 </div>
 
 An escort mission would be perfect to fit the theme of toil. I also wanted to add lighting to this game, and played around with a couple of ideas such as only seeing enemies when they are/aren't in the visible light before settling on the concepts.
@@ -53,13 +53,14 @@ I had already decided to do my own assets for the game before starting, and I th
 
 I tried using a new pixel art program, Piskel, for the first time during this jam, and was switching back and forth between that and Pixilart, which was probably not the right decision to make under a time crunch.
 
+![Tileset PNG](/assets/ToilsOfDeath/Tileset.png)
+
 I decided to have a consistent outer wall with a fence, and created a few different ground sprites for mostly aesthetic value. For levels 2, 3, and 4, the path tile is also shaped to be similar the the enemy each respective level introduces, which I think looked nice.
 
 My favorite asset I made for this game is the reaper, I really liked keeping the shape and color simple, and I think the animations looked good.
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="/assets/ToilsOfDeath/Tileset.png" alt="Tileset PNG" width="40%">
-    <img src="/assets/ToilsOfDeath/Reaper.gif" alt="Reaper GIF" width="40%">
+    <img src="/assets/ToilsOfDeath/Reaper.gif" alt="Reaper GIF" width="45%">
 </div>
 
 #### Game Programming
