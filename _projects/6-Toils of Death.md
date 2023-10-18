@@ -5,8 +5,7 @@ image: /assets/ToilsOfDeath/Cover.png
 description: Play as an amateur Reaper, escorting a cowardly Toad through the spooky wild.
 ---
 
-# Toil's of Death
-# A Toad's Journey
+# Toil's of Death: A Toad's Journey
 
 Toil's of Death is an escort game created for the CPP GDC Halloween Game Jam 2023. I created this project as a solo developer over the course of a day, including the programming, art, and design.
 
