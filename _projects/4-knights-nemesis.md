@@ -35,11 +35,10 @@ The player is also given an option to temporarily freeze their movement to be ab
     <img src="/assets/KnightsNemesis/Killing.gif" alt="Combat GIF" width="30%">
 </div>
 
-<div style="display: flex; justify-content: space-between;">
-    <img src="/assets/KnightsNemesis/SpeedUp.gif" alt="Explosive Turtle GIF" width="30%">
-</div>
-
 **Turn Based**: In order to implement the turn based system the player is free to start every turn. Once the player makes a move, control is given to the level to iterate through every active enemy to make their moves with slight delay in between each, then returning control back to the player. Characters out of range of the player don't have a delay, and a speed up option was added to reduce the delay to be negligible for moving through corridors and to stop waiting for large groups of enemies to attack.
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/KnightsNemesis/SpeedUp.gif" alt="Speed Up GIF" width="30%">
+</div>
 
 #### Enemy Development
 **Base Enemy**: I designed a base enemy class that was able to be reused by other developers to use to quickly create different enemy types. This included all of the logic for attacking, pathfinding, and moving.
@@ -53,7 +52,7 @@ The player is also given an option to temporarily freeze their movement to be ab
 </div>
 
 #### Spawn Mechanics
-In order to randomly spawn in enemies I created a spawner that could be edited to give each level a different spawn table of enemies and the liklihood each spawns. The total spawn rate and maximum number of enemies was also controlled. 
+In order to randomly spawn in enemies I created a spawner that could be edited to give each level a different spawn table of enemies and the liklihood that each spawns. The total spawn rate and maximum number of enemies was also controlled. 
 
 An NPC cat was also added as a little experiment for players. The cat is completely passive, randomly moving throughout the level it spawns in. Killing the cat gives the player a large amount of XP, however it also results in the level spawning more enemies faster.
 
@@ -62,7 +61,7 @@ An NPC cat was also added as a little experiment for players. The cat is complet
 </div>
 
 #### Levelling System
-The levelling system was designed to encourage players to go through floors at an even pace. The enemies level is determined solely by the floor number, so a player speedrunning will soon find themselves overpowered. However, the XP dropped is also determined by level, so staying on any floor will offer diminishing returns over time. Additionally the miniboss and passive cat both offer large sums of XP in return for taking on a suitable level of risk.
+The levelling system was designed to encourage players to go through floors at an even pace. The enemies level is determined solely by the floor number, so a player speedrunning will soon find themselves overpowered. However, the XP dropped is also determined by level, so staying on any floor will offer diminishing returns over time. Additionally the miniboss and passive cat both offer large sums of XP in return for taking on a suitable level of risk. The players level also takes an exponentially increasing amount of XP per level up, as well as diminishing benefits per level, thus incentivizing players to get a few levels, but not spend a long time grinding for levels.
 
 
 ## What I Learned
