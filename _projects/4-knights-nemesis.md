@@ -9,6 +9,8 @@ description: First game project
 
 Knight's Nemesis is a 2D dungeon exploring game created for CS 4700 (Game Development) by a team of 4 developers in the 2022 Fall semester. I worked on many of the core gameplay mechanics such as grid movement, organizing turnbased systems, and creating many of the non playable characters seen in the game.
 
+![Boss Battle](/assets/KnightsNemesis/Boss.png)
+
 <p class="text-center">
 {% include elements/button.html link="https://yawgmoth.github.io/CS4700/assets/games/KnightsNemesis/index.html" text="Play Now" %}
 </p>
@@ -17,11 +19,11 @@ Knight's Nemesis is a 2D dungeon exploring game created for CS 4700 (Game Develo
 
 Play as a knight fighting your way through a dark dungeon to challenge the king for your rightful place
 
-Time your attacks carefully in this turnbased grid movement game
+* Time your attacks carefully in this turnbased grid movement game
 
-5 Levels
+* 5 Levels
 
-7 Enemies
+* 7 Enemies
 
 
 ## Contributions
