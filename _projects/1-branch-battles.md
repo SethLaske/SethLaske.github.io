@@ -23,10 +23,6 @@ Train miners to get gold, use gold to get soldiers, use soldiers to get victory.
 * Battle in 4 different combat styles
 * Only 1 chance for glory
 
-***
-> This page is not quite finished. I sat down to write and ended up writing more on my game than I've written on any paper. It will be condensed and improved in the future. But if you read before I shorten it, I hope you enjoy!
-
-***
 
 ## Contributions
 
