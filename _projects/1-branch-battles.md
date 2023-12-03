@@ -40,35 +40,75 @@ Again, I turned to Stick Wars for inspiration, and allowed the player to take co
 The General required a lot of iterations and playtests to balance his utility in battle as well as improving the player's experience. The final result included the following abilities and limitations:
 * **Mining** - Allowing the general to mine was essential for the early game of each level, as it is likely the only thing the player will be doing
 * **AOE Damage** - Unlike the majority of the units the player will use and fight, the General's attack will hit every enemy in its swing. By doing this the player is given a massive incentive to use the General in combat, and filling in a niche in the team building.
-* **Camp Centric** - The General is the only unit in the game that heals during battle. However, this healing will only take place within the camp. Additionally, the player can only train units for their army while the General is within the camp's borders. This makes sure the player is forced to balance using the General in combat at the front, with healing at the back. A skilled player will have to constantly move the General to where it is most useful. The General also deals an increased amount of damage within the camp as a last stand for the players defenses.
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/BranchBattles/GeneralAOE.gif" alt="General AOE GIF" width="40%">
+    <p align="center" style="font-size: 12px;">Capable of wiping out a large number of enemies</p>
+</div>
+
+* **Camp Centric** - The General is the only unit in the game that heals during battle. However, this healing will only take place within the camp. Additionally, the player can only train units for their army while the General is within the camp's borders. This makes sure the player is forced to balance using the General in combat at the front, with utility at the tent. The General also deals an increased amount of damage within the camp as a last stand for the players defenses.
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/BranchBattles/GeneralHealing.gif" alt="Healing GIF" width="40%">
+    <p align="center" style="font-size: 12px;">Forced to return to tent throughout levels</p>
+</div>
+
 * **Army Buffs** - In order to balance a players desire for their playable character to be strong, and needing to balance the game so the player can't rush every enemy base at the beginning of the level, the General will receive stat boosts based on the army that is being trained. This allows for technical gameplay in training certain numbers of each units to maximize the General's usefulness, as well as balancing the General to being viable at the beginning and end of every level.
+
 * **General Orders** - A common wish from playtesters was to be able to control certain groups of units independently of their main army. The General is able to send any soldier into a charge state, allowing the player to split their army into different groups, as well as offering utility with soul strategies for a skilled player.
+
+<!-- Gif of sending a soldier forward-->
+
 * **Loss Condition** - Although I have seen frustration from players at losing their General, having the General as a loss condition offers a silver lining in my opinion. Rather than having to slowly watch their army die, then the miners die off, as the player spends the last of their gold, before waiting for the tent to be destroyed, nearly every game over ends with the General. Which means that a player was either reckless/not paying attention, or was starting to lose. It allows the player to feel responsible for losing, and knowing they can improve, rather than the slow frustration of losing a level and being unable to stop it.
 
+<!-- 
 <div style="display: flex; justify-content: space-between;">
     <img src="/assets/BranchBattles/GeneralAOE.gif" alt="General AOE GIF" width="40%">
     <img src="/assets/BranchBattles/GeneralHealing.gif" alt="Healing GIF" width="40%">
 </div>
+-->
 
 ##### Game Modes
 Level design was an extremely enjoyable task at the end of the game. I designed a total of 4 game modes, each with slightly different win and loss conditions:
 * **Standard** - This is naturally the most common level type in the game. A player ends when they destroy the enemies base, and lose if their base/General is defeated.
 * **Countdown** - A slightly modified version of standard levels. The same win condition, but the player also loses if the timer reaches 0. The AI in these levels are more defensively inclinded, taking advantage of their win condition.
+
+<!--Pic of enemy side, desert level-->
+
 * **Survival** - My favorite gamemode, the player needs to survive an onslaught of enemies until the timer reaches 0. These levels give me the most control, as each battle is carefully scripted. Levels 8 and 12 are (currently) extreme challenges to players, and force strategy changes and utilizing the General well.
+
+<!--Pic of enemy side, level 7-->
+
 * **Boss** - I included three boss levels in my game. Each follows the same format, once the player destroys the enemy base, the enemy uses magic, spawns reinforcement, and the boss appears from the ruins of their homes. These levels force the player to be cautious and prepare for the challenge that a boss will offer. Additionally I enjoyed adding some creative aspects to these bosses, and they offer a bonus to the players in the form of an extra trainable soldier in battle.
 
+<!--Pic of enemy side, probably Shrek-->
+
+
 ##### Soldiers
-Army design formed the majority of the balancing time. I decided early on to offer the player a larger number of units, and then allow them to change the army they bring into battle. Offering some constraints and decision making even before the battle starts, and also allowing me to expand the game in the future without overwhelming a player with too many available units in battle.
-Beyond the structure of the army, each unit was designed to act within certain niches and to be relatively viable throughout the game. A key component of this is how damage is calculated. If an attack lands, the damage is compared to the units armor stat. If greater than the armor, the unit will take the full damage, if not the unit's received damage is divided by 1 + the original damage. Because of this damage per second can be very dependant on the enemy the unit is fighting.
+*Army design* - Rather than unlocking every soldier to be used in battle, players a constrained to choose a maximum of four soldiers within a battle. Players are thus forced to developing strategies before battles, and allows for more soldiers to be added without being overwhelming.
+
+*Damage Calculations* - In order to calculate the damage a soldier receives, the attacked unit's armor functions as a threshold. If the damage exceeds the armor, the full damage is received. Otherwise only a fraction is received. This effectively creates a type matchup chart between units based on damage and armor, while using attack speed to calculate a seperate DPS.
+
 This was my mentality for each of the soldiers - I really like all of them, so forgive me for discussing each of them in length (as well as offering a couple of strategy tips):
 * **Fighter** - One of the immediately accessible units, the fighter acts as a high DPS, fast unit. Originally forming the main offensive of a players army, in the later levels a Fighters uses become its defensive uses and optimal soul per gold value.
 * **Spear** - As one of the best weapons in medieval history, I wanted them to be extremely useful. Attacking from behind the other units, and offering enough damage to counter Berserkers and Swordsmen it is very useful from the beginning to end. Increasing the General's speed is also a crucial usecase.
 * **Shield** - The classic defensive unit, high armor and HP, low damage and speed. The shield also completes the early game rock paper scizzors matchup between Fighters, Spears, and Shields.
+
+![Shield Wall](/assets/BranchBattles/ShieldSpear.gif)
+<p align="center" style="font-size: 12px;">A phalanx is created to overwhelm the low damage per hit Fighters </p>
+
 * **Swordsmen** - The second single strongest unit, and its position in Level 8 forms a roadblock for players due to its high Damage output making it a counter to the General in many situations, and being extremely well rounded.
 * **Archer** - Shooting from a distance, offering utility of alerting the player to oncoming enemies, and offering very consistent damage to all other units. When used by the player it can also take advantage of the enmies AI in certain levels.
 * **Rage** - The most powerful unit in the game, the Berserker is completely optional for players. It's a reward for the players able to beat Level 12, and becomes extremely useful in finishing the rest of the game. It is also the only trainable enemy with AOE damage making it even more special.
-* **John Wick** - Originally created as a developer tool for myself to instantly kill enemies, I ended up leaving him in the game, trainable after finishing the game. Extremely expensive, but effectively invinsible due to it's perfect stats. Truly the Baba Yage of Branch Battles.
 
+![Rage](/assets/BranchBattles/Berserker.gif)
+<p align="center" style="font-size: 12px;">Every head is a nail if the hammer is big enough </p>
+
+* **John Wick** - Originally created as a developer tool for myself to instantly kill enemies, I ended up leaving him in the game, trainable after finishing the game. Extremely expensive, but effectively invinsible due to it's perfect stats. 
+
+![John Wick](/assets/BranchBattles/John.gif)
+<p align="center" style="font-size: 12px;">Truly the Baba Yage of Branch Battles</p>
+
+<!--
 <div style="display: flex; justify-content: space-between;">
     <img src="/assets/BranchBattles/Miners.gif" alt="Miners GIF" width="40%">
     <img src="/assets/BranchBattles/ShieldSpear.gif" alt="Sheild Wall GIF" width="40%">
@@ -79,8 +119,14 @@ This was my mentality for each of the soldiers - I really like all of them, so f
     <img src="/assets/BranchBattles/John.gif" alt="John GIF" width="40%">
 </div>
 
+-->
+
 #### Artist
+
+<!--This section sucks. Fix it-->
+
 I will preface this section by stating that I am not an artist, and wouldn't consider any of the pixel art I made to be good by professional standards.
+
 With that said I am extremely proud of how the art in Branch Battles turned out. I was able to create buildings, multiple units with unique designs and animations and backgrounds with parallax layers.
 
 Working on the unit animations required a lot of my time over the summer, but allowing each unit to move and feel different was extremely important to the finished game.
@@ -91,9 +137,6 @@ Also, learning some basic shaders was a huge addition for my game, and really he
 
 
 #### Game Programming
-The meat of this game, the results of many late nights, early mornings, losing track of time, a lot of frustration, and a lot of excitement: *The actual developing work*
-
-If you are interested in the full list of everything I worked on, please scroll back up, and press **Play Game** to witness it all. But for anyone who would like the breakdown on some of the standouts that went into creating *Branch Battles*, here you go:
 
 ##### Fundamentals
 In order to make the rest of the explanations make sense I first need to describe the main functions that go into the gameplay loop.
@@ -103,8 +146,9 @@ The TeamInfo trains troops at the set barracks location, and units will then pro
 
 Every object that can take damage is inheriting from the damageable class. The damageable class is inherited by buildings and units. The team base is a subclass to buildings, and end the game when destroyed. The unit class is then inherited by the different types of characters. Most of the functions used by the unit AI is stored here as well, even if not all of the units utilize the state machine (specifically the bosses and General).
 
+<!--Create another flow chart to show the hierarchy-->
 
-##### Unit Behavior
+##### **Unit Behavior**
 The Unit behavior is what I would consider to be the single most important part of this game. Units needed to act rationally and the scripts needed to be flexible enough to give each unit type unique behavior.
 
 The functionality I needed for a series of soldiers to function as a cohesive army are as follows:
@@ -120,7 +164,7 @@ The key checks to determine transitions include if an enemy is agroable, if an e
 
 ![State Machine Overview](/assets/BranchBattles/FSMOverview.png)
 
-* **Wait**: Waiting functions as the idle state, reached only when a unit has reached its assembly range. Within the wait state, the soldier will also move forward until it is at the relative front of it's section. Once it has reached this front position within it's class, it will signal that to any soldiers behind it, creating an army formation.
+* **Wait**: Within the wait state, the soldier moves forward until it is at the relative front of it's section. Once it has reached this front position within it's class, it will signal that to any soldiers behind it, creating an army formation, then idles.
 
 * **Walk**: Walking handles two major nested functionalities. The first is walking towards a target (that is within its agro range) and if there is no target, getting to the rally point before transitioning to wait. The second, more complex task, is reaching that goal while maintaining an army formation, created by following lower classed units.
 This human shield behavior is essential for armies to be able to effectively utilize high armor soldiers, and to move in a realistic manner. Soldiers also needed to be able to determine when to stay behind the shield, and when to move forward to attack an enemy. Too early and it defeats the point of following a shield at all, but too late and the soldiers will just stand by until their shield dies.
@@ -131,9 +175,8 @@ My solution was to recursively find the front human shield of a group and walk a
 * **Charge**: Charging is a slightly niche state, which effectively combines the functionality of the walk and attack states but removes some of the additional logic. Once a soldier enters the charge state, it will approach the enemy, and kill any target it finds, while ignoring the rally or any additional controls from the player or enemy AI. Charge was implemented to create bosses, and give the player partial control over specific units, as well as being heavily used in survival levels.
 
 
-##### Save System
-Creating a save system was something that terrified me before I started, but I knew was essential. By adding a save system it would make players able to reasonably finish the game even as it got longer than a single reasonable session. It also was needed to make Branch Battles *feel* like a real game. 
-Turns out, the actual process was extremely simple, it was only about four lines to save and load a class to memory. The trick was to then work within Unity's limitations, and to decide how to implement the save data, and give players control.
+##### **Save System**
+
 The data that is actually saved only contains 5 elements: 
 * **Troop Keys** - The units that a player has unlocked
 * **Level Keys** - The levels that a player has finished
@@ -141,9 +184,12 @@ The data that is actually saved only contains 5 elements:
 * **Active Army** - The units that a player is currently using in levels
 * **Popup Keys** - Which pop ups a player has seen (used to explain mechanics and could be used for story between levels)
 
-This data is then passed into a static PlayerInfo class which is used throughout the game to provide the needed data to the games systems. By decoupling the systems I don't force the player to reset their progress to play a new game, and unlike old Pokemon games, they can override their data if they would like. This feature was especially useful for myself while testing and developing as I could maintain a completed save file, and access every unit and level, but also test out the game flow by restarting.
+This data is then passed into a static PlayerInfo class which is used throughout the game to provide the needed data to the games systems. By decoupling the systems I don't force the player to reset their progress to play a new game, and unlike old Pokemon games, they can override their data whenever. 
 
-##### Level Creation Process
+This feature was especially useful for myself while testing and developing as I could access every unit and level, but also test out the game flow by restarting, without wiping my finished save.
+
+
+##### **Level Creation Process**
 An ongoing development process was making it as easy as possible to setup new systems within the levels. Here are a few of the improvements I made overtime.
 * **Utilizing Prefabs** - The more I worked on the game, the more I used prefabs, and it still wasn't enough. Every button is now a prefab, nested within another prefab. The tents on either side are prefabs. Taking the time to implement create these prefabs, and create them to be modular was crucial and saved me when creating more levels.
 * **Automating Player Hookups** - Discovering I could give a button a listener in code completely changed how the UI was structured. I created a script that connected the player to the UI at the start of a level, which is what allowed for different army compositions in the first place, and allowed me to utilize prefabs far more effectively, as I only needed to assign a single reference for the entire manager to be automated.
@@ -153,16 +199,17 @@ An ongoing development process was making it as easy as possible to setup new sy
 Combining these with occasional code refactorings really helped me to maintain a flow throughout the duration of the project, and darastically speed up production time.
 
 
-##### Barracks
-The Barracks is only a single scene, comprised of a couple buttons and stats. But like the save system I think its existence is extremely valuable to increasing the depth of Branch Battles to players, and developing functionality common amongst different games.
-My favorite part of it is the stat wheel. Rather than just offering the numbers in text, showing a stat wheel makes the comparisons between units pop, and just looks so cool to me. Naturally, as it was inspired by JJBA.
-Creating the stat wheel forced me to learn a surprising amount about how to use tiled sprites, as well as implementing an outside script to generate a mesh based on a polygon collider. 
+##### **Barracks**
+The Barracks is only a single scene, but its existence is extremely valuable to increasing the depth of Branch Battles to players, and developing functionality common amongst video games.
+
+Creating the stat wheel forced me to learn about how to use tiled sprites, as well as implementing an outside script to generate a mesh based on a polygon collider. 
 
 ![Stat Wheel](/assets/BranchBattles/StatWheel.gif)
-I do also recognize that the Barracks could use a brief in game tutorial to explain it, as well as an improved UI. 
 
-##### Enemy AI
+
+##### **Enemy AI**
 In game there are two main Enemy AIs: Survival and Standard. The countdown, standard, and boss levels all use the same AI, with certain values tweaked to create different behaviors from the player's perspective.
+
 Survival AI is relatively simple. I have groups of preset waves, one wave is trained at a consistent time interval throughout, the other waves are spawned in set intervals from each other. I prefered this over a more random style of waves, as I could steadily increase the numbers of enemies, and offer different challenges. This AI is dependant on the charge state of units, so I am able to arrange enemy formations in specific ways, and time waves carefully so units of different speeds all arrive to the players camp at the same time. I also think it makes for the best showcase of a unit type. Level 8 and 12 force players to deal with primarily swords and berserkers, while also combining in certain formations that the player might use.
 
 Standard AI is more complicated, requiring the AI to dynamically train and position units, and eventually use magic. 
@@ -173,7 +220,7 @@ Standard AI is more complicated, requiring the AI to dynamically train and posit
 ## What I Learned
 Working through this project taught me a ton of concepts and specific to designing, implementing, testing, and vector math. Here are some of my most common subjects I learned about:
 
-* **Good Coding Practice** - Probably the most important learning experience of the project. Throughout my classes, I have been taught bits and pieces about good coding practices, but it never all clicked together until this project. Keeping as many variables private as possible, small functions, well thoughtout inheritance and abstraction, common naming conventions. All of these really started to click as the sum of many small problems began making the game harder and harder to alter. A keen reader might have noticed the terminology I've used in describing certain things is a bit vague, and sometimes contradicts itself. I've called things units, characters, entities, soldiers, troops, enemies, etc... One of the earliest things I set up was giving the damageable class a public reference to the team info of its team. I named that variable General. Which is is not to be confused with (and definetly got confused with) the General, the playable character which has a script name of general. 
+* **Good Coding Practice** - Throughout my classes, I have been taught bits and pieces about good coding practices, but it never all clicked together until this project. Keeping as many variables private as possible, small functions, well thoughtout inheritance and abstraction, common naming conventions. A keen reader might have noticed the terminology I've used in describing certain things is a bit vague, and sometimes contradicts itself. I've called things units, characters, entities, soldiers, troops, enemies, etc... One of the earliest things I set up was giving the damageable class a public reference to the team info of its team. I named that variable General. Which is is not to be confused with (and definetly got confused with) the General, the playable character which has a script name of general. 
 There are plenty of other examples of problems coming in because I had to search through my code for every line that referenced a public variable. Constant minor inconveniences from not having a consistent naming convention for variable vs method names. I needed this project to show me the consequences of all of these poor practices do matter, do build up, and are worth maintaining from the start.
 
 * **Personal Management** - Since this was a solo project I didn't expect to need much in terms of organization, effective github management, and documentation. I figured that I would remember everything, and could just write a couple notes down on my game design document if anything came up. Not a great solution, there are so many different things that should be seperated, tracked, and evaluated. Having a single list of bullet points for everything doesn't work well, and even spreading it amongst multiple pages of a notebook. Having specific commits on github would have been extremely effective, rather than working on the game for a day or two and then just using git to "save" my progress. I think in a future solo project I would want both a backlog/active/completed task system, similar to what my internship used, as well as either a private or public devlog.

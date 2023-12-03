@@ -25,11 +25,11 @@ This project was designed to give us an indepth view of how NPCs can move throug
 
 #### Navmesh Generation
 
-In order to create a NavMesh on a predetermined level the walls are first ordered, and connected in series.
+In order to create a NavMesh on a predetermined level the walls are ordered and connected in series.
 
-With all of the walls drawn, any concave angles are found in the original level shape. For each obtuse angle, an additional line is drawn to a different useable vertex, splitting the original polygon into two.
+Concave angles are found in the original level shape. For each obtuse angle, an additional line is drawn to a different useable vertex, splitting the original polygon into two.
 
-This recurses into the two created polygons until all polygons are convex. Each polygon also remembers what wall it was split from, to be used to create a graph later.
+This recurses into the sub-polygons until all polygons are convex, tracking it's neighboring walls.
 
 Each polygon then is reattached to the polygon it was split from, creating a graph that traverses the entire level.
 
@@ -41,9 +41,9 @@ In order to take advantage of the NavMesh, A* is implemented to find an optimal 
 
 When a waypoint is selected the boid first finds the polygon it is currently in, and the polygon the target is in.
 
-The boid then uses A* to find an optimal path, using the distance between the centers of each polygon as the heuristic values.
+A* is used to final an optimal list of polygons to travel through, using the distance between the polygon centers as its heuristic value.
 
-Once a series of polygons is found, the boid will then go through the edge that connects each polygon, and set waypoints on the midpoint of these connecting edges.
+Rather than moving from center to center the boid travels through the midpoints of the dividing lines
 
 Although this can result in the boid occasionally moving off target, it guarantees that the boid will not crash into walls that could be intersecting the direct line between polygon centers.
 
@@ -60,17 +60,17 @@ Mazes are created randomly using Prim's algorithm.
 
 First the available space is split into a grid of centerpoints.
 
-A random point is selected for the maze to be generated from, and adds all of the adjacent nodes to a frontier of potential nodes.
+A random starting cell is selected for the maze to be generated from, and adds all of its adjacent nodes to a frontier of potential nodes.
 
-A node is selected from that frontier randomly, and connected to the node that added it to the frontier.
+A node is selected from that frontier randomly, and connected to the node that previously added it to the frontier.
 
-The node that was just added will then add all of the adjacent nodes that have not already been added to the maze.
+The node that was just added will then add all of the adjacent unconnected node to the frontier.
 
 This cycles through until every node has been added to the maze.
 
 The walkable path is determined by which nodes added their "children" to the maze, and walls are drawn between the rest of the adjacent nodes.
 
-This algorithm results in a cycleless maze.
+This algorithm results in a cycleless maze, with a slight bias around the starting cell.
 
 <div style="display: flex; justify-content: space-between;">
     <img src="/assets/Navmesh/CreatingMaze.gif" alt="Creating Maze GIF" width="40%">
