@@ -28,7 +28,7 @@ Includes 5 levels, and 3 skeletal enemy types
 
 Conquer your fear of the dark as this dark story unfolds
 
-![Mechanics GIF](/assets/ToilsOfDeath/Mechanics.gif)
+![Mechanics GIF](/assets/ToilsOfDeath/Gameplay.gif)
 
 ## Contributions
 
@@ -45,7 +45,8 @@ My first ideas were inspire by the Boos in Mario, in making enemies only move de
 
 In order to make the game quick to play for reviewers after the jam I chose to introduce a huge gameplay flaw - the reaper has no collisions with the level or enemies.
 
-<!-- Gif of reaper escaping? -->
+![Jailbreak](/assets/ToilsOfDeath/Escape.gif)
+<p align="center" style="font-size: 12px;">Mortal walls only stop mortal souls</p>
 
 This would clearly be a problem for a more serious game, but it helped to fit into the story of the game, and make the game accessible, despite allowing players to optimize the fun out of the game
 
@@ -71,7 +72,7 @@ My favorite asset I made for this game is the reaper, I really liked keeping the
 
 * **Lighting**: This was my first time trying to add lighting to a game, so I went with the most simplistic approach, using Unity's Universal Rendering Pipeline. More important than the visuals were being able to control and detect the lighting. After some brief research I was able to create a nice pulsing effect through code, but I wasn't able to find a simple way to detect how lit a specific game object is. The workaround I ended up making was to get a list of all the lights in a scene, and check the distance the toad is.
 
-<!-- Gif of light pulsing -->
+![Basics](/assets/ToilsOfDeath/Movement.gif)
 
 * **Player Mechanics**: I created the toad first, focusing on having a high degree of tuning from the inspector. Then I created the Reaper, intentionally skipping wall collisions, and using the animator to handle the combat. The camera was created to try and show both characters when possible, before snapping to the reaper.
 
@@ -83,23 +84,11 @@ My favorite asset I made for this game is the reaper, I really liked keeping the
 
 Once the core mechanics were finished, I alloted the remaining time to working on a variety of enemies to populate the levels:
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
 
-1. **Snake**: The basic enemy present in multiple levels. Moves straight towards the toad. Simple, but having an enemy that doesn't wait before attacking is very important when the Reaper can abandon the toad without consequences.
-
-2. **Cat**: The next tier of enemy, sleeping until the toad gets too close, and then charging quickly. Quick to implement, fits the theme, and adds some variety to the snake and how a player can finish the level.
-
-3. **Bat**: The last enemy, and the most interesting. Each bat has a preselected center point, which I can place anywhere on the map, and then the bat will fly circles around that point, using a vector rotation to calculate its velocity and direction. Really adds a lot to force a player to have some level knowledge and timing.
-
-<img src="/assets/ToilsOfDeath/Snake.gif" alt="Snake GIF" width="100%">
-<img src="/assets/ToilsOfDeath/Cat.gif" alt="Cat GIF" width="100%">
-<img src="/assets/ToilsOfDeath/Bat.gif" alt="Bat GIF" width="100%">
-
-</div>
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="flex: 1;">
-        1. **Snake**: The basic enemy present in multiple levels. Moves straight towards the toad. Simple, but having an enemy that doesn't wait before attacking is very important when the Reaper can abandon the toad without consequences.
+        <strong>Snake</strong>: The basic enemy present in multiple levels. Moves straight towards the toad. Simple, but having an enemy that doesn't wait before attacking is very important when the Reaper can abandon the toad without consequences.
     </div>
     <div style="flex: 1;">
         <img src="/assets/ToilsOfDeath/Snake.gif" alt="Snake GIF" width="100%">
@@ -108,7 +97,7 @@ Once the core mechanics were finished, I alloted the remaining time to working o
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="flex: 1;">
-        2. **Cat**: The next tier of enemy, sleeping until the toad gets too close, and then charging quickly. Quick to implement, fits the theme, and adds some variety to the snake and how a player can finish the level.
+        <strong>Cat</strong>: The next tier of enemy, sleeping until the toad gets too close, and then charging quickly. Quick to implement, fits the theme, and adds some variety to the snake and how a player can finish the level.
     </div>
     <div style="flex: 1;">
         <img src="/assets/ToilsOfDeath/Cat.gif" alt="Cat GIF" width="100%">
@@ -117,7 +106,7 @@ Once the core mechanics were finished, I alloted the remaining time to working o
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="flex: 1;">
-        3. **Bat**: The last enemy, and the most interesting. Each bat has a preselected center point, which I can place anywhere on the map, and then the bat will fly circles around that point, using a vector rotation to calculate its velocity and direction. Really adds a lot to force a player to have some level knowledge and timing.
+        <strong>Bat</strong>: The last enemy, and the most interesting. Each bat has a preselected center point, which I can place anywhere on the map, and then the bat will fly circles around that point, using a vector rotation to calculate its velocity and direction. Really adds a lot to force a player to have some level knowledge and timing.
     </div>
     <div style="flex: 1;">
         <img src="/assets/ToilsOfDeath/Bat.gif" alt="Bat GIF" width="100%">

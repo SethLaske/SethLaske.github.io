@@ -41,22 +41,21 @@ The General required a lot of iterations and playtests to balance his utility in
 * **Mining** - Allowing the general to mine was essential for the early game of each level, as it is likely the only thing the player will be doing
 * **AOE Damage** - Unlike the majority of the units the player will use and fight, the General's attack will hit every enemy in its swing. By doing this the player is given a massive incentive to use the General in combat, and filling in a niche in the team building.
 
-<div style="display: flex; justify-content: space-between;">
-    <img src="/assets/BranchBattles/GeneralAOE.gif" alt="General AOE GIF" width="40%">
-    <p align="center" style="font-size: 12px;">Capable of wiping out a large number of enemies</p>
-</div>
+![Gneral AOE](/assets/BranchBattles/GeneralAOE.gif)
+<p align="center" style="font-size: 12px;">Capable of wiping out a large number of enemies</p>
+
 
 * **Camp Centric** - The General is the only unit in the game that heals during battle. However, this healing will only take place within the camp. Additionally, the player can only train units for their army while the General is within the camp's borders. This makes sure the player is forced to balance using the General in combat at the front, with utility at the tent. The General also deals an increased amount of damage within the camp as a last stand for the players defenses.
-<div style="display: flex; justify-content: space-between;">
-    <img src="/assets/BranchBattles/GeneralHealing.gif" alt="Healing GIF" width="40%">
-    <p align="center" style="font-size: 12px;">Forced to return to tent throughout levels</p>
-</div>
+
+![Gneral Healing](/assets/BranchBattles/GeneralHealing.gif)
+<p align="center" style="font-size: 12px;">Forced to return to tent throughout levels</p>
 
 * **Army Buffs** - In order to balance a players desire for their playable character to be strong, and needing to balance the game so the player can't rush every enemy base at the beginning of the level, the General will receive stat boosts based on the army that is being trained. This allows for technical gameplay in training certain numbers of each units to maximize the General's usefulness, as well as balancing the General to being viable at the beginning and end of every level.
 
 * **General Orders** - A common wish from playtesters was to be able to control certain groups of units independently of their main army. The General is able to send any soldier into a charge state, allowing the player to split their army into different groups, as well as offering utility with soul strategies for a skilled player.
 
-<!-- Gif of sending a soldier forward-->
+![Gneral Orders](/assets/BranchBattles/GeneralCommand.gif)
+<p align="center" style="font-size: 12px;">Charging soldiers will return with their shields or on them</p>
 
 * **Loss Condition** - Although I have seen frustration from players at losing their General, having the General as a loss condition offers a silver lining in my opinion. Rather than having to slowly watch their army die, then the miners die off, as the player spends the last of their gold, before waiting for the tent to be destroyed, nearly every game over ends with the General. Which means that a player was either reckless/not paying attention, or was starting to lose. It allows the player to feel responsible for losing, and knowing they can improve, rather than the slow frustration of losing a level and being unable to stop it.
 
@@ -72,15 +71,18 @@ Level design was an extremely enjoyable task at the end of the game. I designed 
 * **Standard** - This is naturally the most common level type in the game. A player ends when they destroy the enemies base, and lose if their base/General is defeated.
 * **Countdown** - A slightly modified version of standard levels. The same win condition, but the player also loses if the timer reaches 0. The AI in these levels are more defensively inclinded, taking advantage of their win condition.
 
-<!--Pic of enemy side, desert level-->
+![Standard Battle Layout](/assets/BranchBattles/StandardLevel.png)
+<p align="center" style="font-size: 12px;">Destroy the tent to win</p>
 
 * **Survival** - My favorite gamemode, the player needs to survive an onslaught of enemies until the timer reaches 0. These levels give me the most control, as each battle is carefully scripted. Levels 8 and 12 are (currently) extreme challenges to players, and force strategy changes and utilizing the General well.
 
-<!--Pic of enemy side, level 7-->
+![Standard Battle Layout](/assets/BranchBattles/SurvivalLevel.png)
+<p align="center" style="font-size: 12px;">Survive until the timer reaches 0</p>
 
 * **Boss** - I included three boss levels in my game. Each follows the same format, once the player destroys the enemy base, the enemy uses magic, spawns reinforcement, and the boss appears from the ruins of their homes. These levels force the player to be cautious and prepare for the challenge that a boss will offer. Additionally I enjoyed adding some creative aspects to these bosses, and they offer a bonus to the players in the form of an extra trainable soldier in battle.
 
-<!--Pic of enemy side, probably Shrek-->
+![Standard Battle Layout](/assets/BranchBattles/BossLevel.png)
+<p align="center" style="font-size: 12px;">Something is going to come out of that, and it could be a lawsuit</p>
 
 
 ##### Soldiers
@@ -144,9 +146,9 @@ The player and opponent each have a TeamInfo script that is responsible for stor
 The player has a script that interfaces to the team info with the player's inputs, and the enemy has a script that functions the same, but based on an AI's decisions.
 The TeamInfo trains troops at the set barracks location, and units will then proceed to the rally point, which is changing throughout the game.
 
-Every object that can take damage is inheriting from the damageable class. The damageable class is inherited by buildings and units. The team base is a subclass to buildings, and end the game when destroyed. The unit class is then inherited by the different types of characters. Most of the functions used by the unit AI is stored here as well, even if not all of the units utilize the state machine (specifically the bosses and General).
+The hierarchy of inheritance for damageables is also important, certain bypasses in attacks and spells, and making the code easier to work on.
 
-<!--Create another flow chart to show the hierarchy-->
+![Damageable Hierarchy](/assets/BranchBattles/DamageableHierarchy.png)
 
 ##### **Unit Behavior**
 The Unit behavior is what I would consider to be the single most important part of this game. Units needed to act rationally and the scripts needed to be flexible enough to give each unit type unique behavior.
@@ -184,10 +186,21 @@ The data that is actually saved only contains 5 elements:
 * **Active Army** - The units that a player is currently using in levels
 * **Popup Keys** - Which pop ups a player has seen (used to explain mechanics and could be used for story between levels)
 
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/BranchBattles/EmptyMap.png" alt="Started" width="40%">
+    <img src="/assets/BranchBattles/EmptyBarracks.png" alt="Started GIF" width="40%">
+</div>
+<p align="center" style="font-size: 12px;">Early Game</p>
+
 This data is then passed into a static PlayerInfo class which is used throughout the game to provide the needed data to the games systems. By decoupling the systems I don't force the player to reset their progress to play a new game, and unlike old Pokemon games, they can override their data whenever. 
 
 This feature was especially useful for myself while testing and developing as I could access every unit and level, but also test out the game flow by restarting, without wiping my finished save.
 
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/BranchBattles/FinishedMap.png" alt="Finished" width="40%">
+    <img src="/assets/BranchBattles/FinishedBarracks.png" alt="Finished" width="40%">
+</div>
+<p align="center" style="font-size: 12px;">End Game</p>
 
 ##### **Level Creation Process**
 An ongoing development process was making it as easy as possible to setup new systems within the levels. Here are a few of the improvements I made overtime.
@@ -212,8 +225,18 @@ In game there are two main Enemy AIs: Survival and Standard. The countdown, stan
 
 Survival AI is relatively simple. I have groups of preset waves, one wave is trained at a consistent time interval throughout, the other waves are spawned in set intervals from each other. I prefered this over a more random style of waves, as I could steadily increase the numbers of enemies, and offer different challenges. This AI is dependant on the charge state of units, so I am able to arrange enemy formations in specific ways, and time waves carefully so units of different speeds all arrive to the players camp at the same time. I also think it makes for the best showcase of a unit type. Level 8 and 12 force players to deal with primarily swords and berserkers, while also combining in certain formations that the player might use.
 
+![WaveAI](/assets/BranchBattles/MediumWaveAI.png)
+<p align="center" style="font-size: 12px;">Waves are fully customizable</p>
+
 Standard AI is more complicated, requiring the AI to dynamically train and position units, and eventually use magic. 
 * **Training Army** - I created a unit set for each unit class, and 2 tiers of checkpoints. The enemy will go through the first check point, training a random unit from the class unit set until it has fulfilled that class checkpoint. It will then go through all of the other classes, then repeat the process for the second set. This allows the AI to train a semi random army composition, while still granting me control over how a game might look. For example training a lot of miners at the start versus waiting, and creating a hyper offensive unit lineup rather than a deffensive selection.
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/BranchBattles/EasyGodAI.png" alt="Easy AI" width="40%">
+    <img src="/assets/BranchBattles/HardGodAI.png" alt="Hard AI" width="40%">
+</div>
+<p align="center" style="font-size: 12px;">A much wider array of options are given for customizing enemies to simulate different decision making despite being controlled by the same logic</p>
+
 * **Positioning Army** - The AI compared its own count for soldiers with the number of soldiers that the player has. This is then compared to the attack threshold for the enemy to charge. A minimum soldier count is also set that the enemy will retreat at. This helps create agressive vs passive enemy's with the same script attached. A retreat point is also added, creating weakpoints for certain levels that players can take advantage of.
 * **Using Magic** - Based on the circumstances of the battle, when the enemy has an opportunity to use magic, the enemy will calculate and use magic on one of the following targets: The largest group of player soldiers, 
 

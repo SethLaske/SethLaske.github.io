@@ -83,8 +83,10 @@ Over the course of this project (and class) I learned a lot about how to design 
 
 Learning A* was also incredibly important, as I have used the algorithm in multiple projects and work since then. Learning the fundamentals and implementation here gave me enough understanding to be able to modify the implementation to prioritize different aspects as well, such as computing time or minimizing cycles based on the situation.
 
+Examining different map structures was also critical. Comparing the functionality to create organic polygons versus square cells really showcases the insight required for procedurally generating levels. It also showed me how AI and level design can be built to handle different circumstances, or where they may need to compensate for each other.
+<!--
 By implementing the maps, I also learned why game developers create maps in certain ways, as well as how the different implementations can affect behaviors. Designing these levels with the behavior in mind is crucial when comparing how the same boid can behave differently in the preset levels and the maze. 
 
-The process of dividing a level into polygons was also very important. The process of splitting up these polygons was a challenge to understand, but once implemented allowed for clean pathfinding and movement mechanics. As well as improving my understanding of vector math, especially within a program.
+ The process of dividing a level into polygons was also very important. The process of splitting up these polygons was a challenge to understand, but once implemented allowed for clean pathfinding and movement mechanics. As well as improving my understanding of vector math, especially within a program.
 
-And finally implementing a style of procedurally generated level design was an important experience. Prim's algorithm is very straight forward, and useful at generating a cycleless maze, but nodes closer to the center will typically connect to more neighbors on account of being in the frontier longer. 
+Implementing a style of procedurally generated level design was an important experience, Prim's algorithm is very effective but would be hard to modify. It is useful where truely random levels are needed, but falls short of ensuring an interesting or spreadout maze to explore -->
