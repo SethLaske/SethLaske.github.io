@@ -20,10 +20,10 @@ nav_exclude:                                            # The following paths ar
   - pages/index.md
   - pages/blog.html
   - pages/resume.pdf
-  - pages/hidden_projects/2-bee-free
-  - pages/hidden_projects/2-rats-king
-  - pages/hidden_projects/4-knights-nemesis
-  - pages/hidden_projects/7-jack-black-attack
+  - pages/2-bee-free
+  - pages/2-rats-king
+  - pages/4-knights-nemesis
+  - pages/7-jack-black-attack
 
 
 ### Author Info ###
